@@ -21,6 +21,7 @@ nav ul {
 
 a {
   text-decoration: none;
+  color: gray;
 }
 
 nav li {
@@ -56,30 +57,52 @@ main > ul:nth-child(2) > li:last-child {
 
 main > article {
   margin-top: 30px;
+  overflow: hidden;
 }
 
 main > article > * {
   float: left;
   width: 50%;
-  overflow: hidden;
 }
 
 main > article > img {
   /* so that the padding and margin cut into the border width */
   box-sizing: border-box;
-  padding-left: 30px;
+  padding-right: 30px;
 }
 
-/* // insert CSS for heading */
+main > article > section > h1 {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
 
 main > article > section > p {
   height: 300px; 
   /* creates scroll bar that determins if it needs just x or y or both scroll bars */
   overflow: auto;
+  font-style: italic;
+  font-size: large;
+  margin-bottom: 10px;
 }
 
 footer {
   height: 100px;
   background-color: #444;
   margin-top: 30px;
+}
+
+button:hover {
+  background-color: aqua;
+  transition: 350ms;
+}
+
+button {
+  background-color: black;
+  color: white;
+  transition: 350ms;
+  width: 150px;
+  height: 40px;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 5px;
 }
