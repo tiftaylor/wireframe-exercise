@@ -1,0 +1,85 @@
+header {
+  background-color: #444;
+  height: 90px;
+}
+
+nav {
+  margin: 0 auto;
+  width: 960px;
+}
+
+nav img {
+  /* 90 from header parent minus 70 my img height, divided by 2 */
+  margin-top: 10px;
+  float: left;
+  margin-right: 30px; 
+}
+
+nav ul {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li {
+  float: left;
+  /* to get vertical alignment of the li's match line-height to the height of the parent (header) */
+  line-height: 90px;
+  margin-right: 90px;
+}
+
+main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* the > means the DIRECT child OF SPECIFICALLY Main, but if you didn't have it, it would grab the first child of every element within main (which is all images in this html set up) */
+main > img:first-child {
+  margin-top: 30px;
+}
+
+main > ul:nth-child(2) {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+main > ul:nth-child(2) > li {
+  margin-right: 30px;
+  float: left;
+}
+
+main > ul:nth-child(2) > li:last-child {
+  margin-right: 0;
+}
+
+main > article {
+  margin-top: 30px;
+}
+
+main > article > * {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+
+main > article > img {
+  /* so that the padding and margin cut into the border width */
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+/* // insert CSS for heading */
+
+main > article > section > p {
+  height: 300px; 
+  /* creates scroll bar that determins if it needs just x or y or both scroll bars */
+  overflow: auto;
+}
+
+footer {
+  height: 100px;
+  background-color: #444;
+  margin-top: 30px;
+}
